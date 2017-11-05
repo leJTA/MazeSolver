@@ -26,7 +26,7 @@ public class Maze {
 			System.out.println();
 		}
 		System.out.println("Initial position : " + initialState.position());
-		System.out.print("Goals : ");
+		System.out.print("Goal(s) : ");
 		for(Position p : goals)
 			System.out.print(p + " ");
 		System.out.println();
@@ -63,6 +63,11 @@ public class Maze {
 			actions.add(Action.EAST);
 			
 		return actions;
+	}
+	
+	// Initial Node : the root
+	public Node root(){
+		return new Node(initialState, null, 0, h1(initialState));
 	}
 
 	// Child node created from a parent node and an action

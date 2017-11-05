@@ -10,9 +10,15 @@ public class Node {
 		action = act;
 		g = cost;
 		h = heur;
+		f = g + h;
 	}
 	
 	public State state(){
 		return state;
+	}
+	
+	@Override
+	public String toString(){
+		return "[" + state.position().toString() + ", " + f + ", " + g + ", " + h + "]";
 	}
 }
