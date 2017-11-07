@@ -16,6 +16,9 @@ public class Node {
 	public State state(){
 		return state;
 	}
+	public Action action(){
+		return action;
+	}
 	
 	@Override
 	public String toString(){

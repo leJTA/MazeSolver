@@ -11,6 +11,7 @@ public class Maze {
 	
 	// Constructor
 	public Maze(char[][] m){
+		System.out.println("========= NEW MAZE =========\n");
 		map = m;
 		limit = m.length + m[0].length;
 		goals = new ArrayList<Position>(0);
@@ -25,11 +26,12 @@ public class Maze {
 			}
 			System.out.println();
 		}
+		System.out.println();
 		System.out.println("Initial position : " + initialState.position());
 		System.out.print("Goal(s) : ");
 		for(Position p : goals)
 			System.out.print(p + " ");
-		System.out.println();
+		System.out.println("\n");
 	}
 	
 	// Getter of initialState
